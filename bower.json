@@ -1,0 +1,29 @@
+{
+  "name": "taskman",
+  "description": "Taskman is a freeware to manage your tasks.",
+  "main": "index.js",
+  "authors": [
+    "Kishan kachchhi"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "task",
+    "manager",
+    "to-do",
+    "task",
+    "scheduler",
+    "schedule",
+    "manager"
+  ],
+  "homepage": "https://github.com/kishankachchhi/taskman",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.9"
+  }
+}

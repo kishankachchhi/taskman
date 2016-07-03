@@ -1,0 +1,14 @@
+<md-bottom-sheet class="md-list md-has-header">
+    <md-subheader>
+        Contact <span class="name">{{ vm.task.name }}</span>:
+    </md-subheader>
+
+    <md-list>
+        <md-list-item ng-repeat="item in vm.items">
+            <md-button ng-click="vm.contactTask(item)">
+                <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
+                {{item.name}}
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-bottom-sheet>
