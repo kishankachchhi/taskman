@@ -12,8 +12,13 @@ html, body {
     background-color: transparent;
     border: none;
     height: 38px;
-    margin: 16px;
+    margin: 16px; !important;
     width: 36px;
+    vertical-align: middle;
+}
+
+.menu md-icon{
+
 }
 
 

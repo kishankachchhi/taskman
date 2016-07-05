@@ -1,30 +1,39 @@
-<div ng-controller='ContactController as cc' class="radioDemo2 bidi">
-    <h2>Contact List</h2>
+<div ng-controller='TaskController as tc' class="radioDemo2 bidi">
+    <h2>Task
+        <status></status>
+    </h2>
     <md-divider></md-divider>
-    <md-radio-group ng-model="cc.selectedId" >
+    <md-input-group>
         <div class="row">
-            <div flex layout='row' layout-padding layout-align="start center" >
-                <div flex style="max-width:200px;">
-                    {{person.title}}
+            <div flex layout='row' layout-padding layout-align="start center">
+                <div class="btn-groups">
+                    <a href class="text-sm btn btn-lg btn-rounded btn-stroke btn-success m-r">
+                        <i class="fa fa-check-square-o fa-3x pull-left"></i>
+                    <span class="block clear text-left m-v-xs">
+                      It's<b class="text-lg block font-bold">Done !</b>
+                    </span>
+                    </a>
+                    <a href class="text-sm btn btn-lg btn-rounded btn-stroke btn-info m-r">
+                        <i class="fa fa-repeat fa-3x pull-left"></i>
+                    <span class="block clear text-left m-v-xs">
+                      Let it<b class="text-lg block font-bold">Snooze !</b>
+                    </span>
+                    </a>
                 </div>
-                <md-radio-button flex
-                                 ng-value="person.id"
-                                 class="md-primary" >
-                    {{person.fullName}}
-                </md-radio-button>
             </div>
         </div>
-    </md-radio-group>
+    </md-input-group>
     <md-divider></md-divider>
     <div class="summary" flex layout="row" layout-align="space-between center">
         <div flex-initial>
-            <span class="title">Selected User</span>: <span class="md-checked">{{cc.selectedUser()}}</span>
+            <!--<span class="title">Selected User</span>: <span class="md-checked">{{tc.selectedUser()}}</span>-->
         </div>
+
     </div>
 </div>
 <style>
     html[dir="rtl"] .bidi {
         padding-right: 20px;
-        padding-left:0;
+        padding-left: 0;
     }
 </style>

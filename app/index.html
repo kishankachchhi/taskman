@@ -10,7 +10,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="./assets/animate.css/animate.css"/>
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./assets/angular/angular-loading-bar/build/loading-bar.css"/>
+    <link rel="stylesheet" href="./assets/angular/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="./assets/styles/material-design-icons.css"/>
+    <link rel="stylesheet" href="./assets/styles/custom.min.css"/>
+    <script type="text/javascript" src="./assets/jquery/screenfull/dist/screenfull.min.js"></script>
     <link rel="stylesheet" href="./assets/app.css"/>
 
     <style type="text/css">
@@ -27,7 +33,7 @@
     <md-button class="menu" hide-gt-sm ng-click="tl.toggleList()" aria-label="Show Task List">
         <md-icon md-svg-icon="menu"></md-icon>
     </md-button>
-    <h1>Angular Material - Starter App</h1>
+    <h1>TaskMan</h1>
 </md-toolbar>
 
 <div flex layout="row">
@@ -37,8 +43,9 @@
         <md-list>
             <md-list-item ng-repeat="it in tl.tasks">
                 <md-button ng-click="tl.selectTask(it)" ng-class="{'selected' : it === tl.selected }">
-                    <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-                        <div layout="column" class="task-menu occupy100">
+                    <div layout="raw" class="occupy100">
+                        <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
+                        <div layout="column" flex class="task-menu occupy100">
                             <div flex>{{it.name}}</div>
                             <div flex>
                                 <div layout="row">
@@ -47,6 +54,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </md-button>
             </md-list-item>
         </md-list>
@@ -63,7 +71,7 @@
             <md-icon md-svg-icon="share"></md-icon>
         </md-button>
 
-        <div ng-include="'views/statusPallet.html'"></div>
+        <div ng-include="'src/views/statusPallet.html'"></div>
 
     </md-content>
 
@@ -72,31 +80,9 @@
     <script type="text/javascript" src="./bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
     <script type="text/javascript" src="./src/Tasks.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="./src/controllers/TaskController.js"></script>
     <script type="text/javascript" src="./src/services/TaskService.js"></script>
-
-    <script type="text/javascript">
-        angular
-                .module('taskMan', ['ngMaterial', 'tasks'])
-                .config(function ($mdThemingProvider, $mdIconProvider) {
-                    $mdIconProvider
-                            .icon("calendar", "./assets/svg/calendar.svg", 128)
-                            .icon("clock", "./assets/svg/clock.svg", 128)
-                            .icon("light-bulb", "./assets/svg/light-bulb.svg", 128)
-                            .icon("monitor", "./assets/svg/monitor.svg", 128)
-                            .icon("notepad", "./assets/svg/notepad.svg", 128)
-                            .icon("briefcase", "./assets/svg/briefcase.svg", 128)
-                            .icon("menu", "./assets/svg/menu.svg", 24)
-                            .icon("share", "./assets/svg/tablet.svg", 24)
-                            .icon("google_plus", "./assets/svg/google_plus.svg", 512)
-                            .icon("hangouts", "./assets/svg/hangouts.svg", 512)
-                            .icon("twitter", "./assets/svg/twitter.svg", 512)
-                            .icon("phone", "./assets/svg/phone.svg", 512);
-                    $mdThemingProvider.theme('default')
-                            .primaryPalette('brown')
-                            .accentPalette('red');
-                });
-    </script>
 </div>
 </body>
 </html>
