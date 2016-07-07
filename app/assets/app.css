@@ -12,15 +12,10 @@ html, body {
     background-color: transparent;
     border: none;
     height: 38px;
-    margin: 16px; !important;
+    margin: 16px;
     width: 36px;
     vertical-align: middle;
 }
-
-.menu md-icon{
-
-}
-
 
 md-toolbar h3 {
     margin: auto;
@@ -46,7 +41,7 @@ md-sidenav  md-list {
 /* Primary content area */
 
 #content {
-    overflow: hidden;
+    /*overflow: auto;*/
 }
 
 #content  {
@@ -130,6 +125,7 @@ md-toolbar h1 {
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
+    margin-top: 10px;
 }
 
 .caption{
@@ -161,4 +157,12 @@ span.name {
     font-weight: bold;
     font-size:1.1em;
     padding-left:5px;
+}
+
+.fa > .glyphicon {
+    vertical-align: text-top;
+}
+
+.btn-groups > a:active{
+    background-color: #bdd0cb;
 }
