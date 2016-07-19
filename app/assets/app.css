@@ -35,6 +35,8 @@ md-list .md-button.selected {
 
 md-sidenav  md-list {
     padding: 0px 0px 8px 0px;
+    height: 100%;
+    overflow: auto;
 }
 
 
@@ -165,4 +167,9 @@ span.name {
 
 .btn-groups > a:active{
     background-color: #bdd0cb;
+}
+
+.add-task{
+    float: right;
+    margin: 15px;
 }

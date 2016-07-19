@@ -22,6 +22,7 @@
         self.selectTask   = selectTask;
         self.toggleList   = toggleTasksList;
         self.makeContact  = makeContact;
+        self.showAddTaskDialog = showAddTaskDialog;
 
         // Load all registered tasks
 
@@ -83,6 +84,10 @@
                     $mdBottomSheet.hide(action);
                 };
             }
+        }
+
+        function showAddTaskDialog(){
+            
         }
 
     }
